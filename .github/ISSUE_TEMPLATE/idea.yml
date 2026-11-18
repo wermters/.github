@@ -1,0 +1,16 @@
+name: Idea
+description: A thought worth keeping. No commitment.
+type: Idea
+title: "Idea: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Private-data reminder: no money, identity or personal-life details.
+  - type: input
+    id: oneliner
+    attributes:
+      label: One-liner
+      description: The idea in one sentence.
+    validations:
+      required: true
