@@ -1,0 +1,43 @@
+name: Build
+description: A change to make. Done when the acceptance criteria hold.
+type: Build
+title: "Build: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Private-data reminder: no money, identity or personal-life details in this issue.
+        Use synthetic data in examples.
+  - type: textarea
+    id: goal
+    attributes:
+      label: Goal
+      description: What should be true after this is built, and for whom?
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+      description: Checkable statements. Work is Ready only when these are written down.
+      value: |
+        - [ ]
+        - [ ]
+    validations:
+      required: true
+  - type: input
+    id: plan
+    attributes:
+      label: Plan link
+      description: Link to the plan, spec or decision note this belongs to (optional).
+  - type: dropdown
+    id: lane
+    attributes:
+      label: Lane
+      description: gated = CI plus AI reviewer; owner = the owner approves each change (infrastructure, credentials, access).
+      options:
+        - gated
+        - owner
+      default: 0
+    validations:
+      required: true
