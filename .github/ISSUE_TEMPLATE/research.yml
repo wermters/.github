@@ -1,0 +1,47 @@
+name: Research
+description: A question to investigate. Ends with an answer, not a change.
+type: Research
+title: "Research: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Private-data reminder: no money, identity or personal-life details in this issue
+        (account numbers, balances, documents, names of third parties). Describe the
+        question in general terms. Real data stays on household hardware.
+  - type: textarea
+    id: question
+    attributes:
+      label: Question
+      description: What do we want to know? One question, phrased so it can be answered.
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: Why
+      description: What decision or piece of work does the answer feed?
+    validations:
+      required: true
+  - type: input
+    id: budget
+    attributes:
+      label: Budget
+      description: How much effort to spend before stopping with what is found.
+      value: "1 round, up to 5 researchers"
+    validations:
+      required: true
+  - type: textarea
+    id: answer
+    attributes:
+      label: What would answer it
+      description: What would a good answer look like? Sources, a comparison, a recommendation.
+    validations:
+      required: true
+  - type: checkboxes
+    id: private-data
+    attributes:
+      label: Private data check
+      options:
+        - label: This issue contains no private household data.
+          required: true
